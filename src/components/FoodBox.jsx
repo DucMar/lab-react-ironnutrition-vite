@@ -4,9 +4,9 @@ const FoodBox = ({ food, onDelete}) => {
 
   const totalCalories = food.calories * food.servings;
   const handleClick = () => {
-    onDelete(food);
+    onDelete(food.id);
   };
-
+  
   return (
     <div>
     <p>{food.name}</p>

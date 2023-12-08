@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import foodsJson from "./foods.json";
 import FoodBox from "./components/FoodBox";
+import AddFoodForm from "./components/AddFoodForm";
 
   
 function App() {
@@ -9,8 +10,9 @@ function App() {
   return (
     <div className="App">
       {foods.map(food => (
-        <FoodBox key={food.id} food={food} />
-      ))}
+        <FoodBox key={food.id} food={food} />;
+        <AddFoodForm />
+))}
     </div>
   );
 }
