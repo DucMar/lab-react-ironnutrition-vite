@@ -1,12 +1,12 @@
 import React from 'react';
 
-const FoodBox = ({ food, onDelete}) => {
+const FoodBox = ({food, onDelete}) => {
 
   const totalCalories = food.calories * food.servings;
   const handleClick = () => {
     onDelete(food.id);
   };
-  
+
   return (
     <div>
     <p>{food.name}</p>
@@ -17,13 +17,15 @@ const FoodBox = ({ food, onDelete}) => {
     <p>Servings: {food.servings}</p>
   
     <p>
-      <b>Total Calories: <span>{totalCalories}</span> </b> kcal
+      <b>Total Calories:</b> <span>{totalCalories}</span>kcal
     </p>
  
     <button onClick={handleClick}>Delete</button>
 
-  </div>  
-     );
-    };
+   </div>  
+    );
+
+
+};
     
  export default FoodBox;

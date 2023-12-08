@@ -16,6 +16,7 @@ const AddFoodForm = () => {
 };
 return (
     <div>
+      <button>Create</button>
       <AddFoodForm addNewFood={addNewFood} /> 
       {foods.map(food => {
         return <FoodBox key={food.id} food={food} />;

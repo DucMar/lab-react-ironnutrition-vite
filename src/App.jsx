@@ -9,9 +9,9 @@ function App() {
   const [foods, setFoods] = useState(foodsJson);
   return (
     <div className="App">
+      <AddFoodForm />
       {foods.map(food => (
-        <FoodBox key={food.id} food={food} />;
-        <AddFoodForm />
+      <FoodBox key={food.id} food={food} onDelete={handleClick}/> 
 ))}
     </div>
   );
